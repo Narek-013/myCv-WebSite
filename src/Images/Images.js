@@ -8,7 +8,10 @@ import prImg4 from "./projects/4.png";
 import prImg5 from "./projects/5.png";
 import prImg6 from "./projects/6.png";
 import foodList from "./projects/foodList.png";
-import toDoList from "./projects/toDoLists.png"
+import toDoList from "./projects/toDoLists.png";
+import myCvDark from "./myCvLogo/myCvDark.webp";
+import myCvLight from "./myCvLogo/myCvLight.webp";
+import myCvLightLogo from "./myCvLogo/myCvLogoLight.bmp"
 
 export const images = {
   logo,
@@ -24,4 +27,7 @@ export const images = {
     foodList,
     toDoList,
   },
+  myCvDark,
+  myCvLight,
+  myCvLightLogo,
 };

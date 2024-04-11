@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import './lightDark.css'
+import { useDispatch } from "react-redux";
+import { changeLight } from "../../store/slices/myCvSlices";
 
 export default function LightDark({ darkLight }) {
   const [isDarkMode, toggle] = useState(true);
+  const dispatch = useDispatch()
 
   const properties = {
     sun: {
@@ -39,6 +42,7 @@ export default function LightDark({ darkLight }) {
 
   const changeMode = () => {
     toggle(!isDarkMode);
+    dispatch(changeLight());
     darkLight.current.classList.toggle("light");
   };
 

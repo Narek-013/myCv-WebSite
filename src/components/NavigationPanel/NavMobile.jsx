@@ -5,7 +5,7 @@ import { useState } from "react";
 import { selectMyCv } from "../../store/slices/myCvSlices";
 import {useSelector} from "react-redux"
 
-const NavMobile = () => {
+const NavMobile = ({light}) => {
    
    const { aboutScroll, contactScroll ,projectScroll} = useSelector(selectMyCv);
    const [isOpen, setOpen] = useState(false);
@@ -19,7 +19,7 @@ const NavMobile = () => {
     return (
       <nav className="navPanel mobile">
         <img
-          src={images.logo}
+          src={light ? images.myCvLight : images.myCvDark}
           alt="Logo"
           className="logoImg"
           onClick={() => changeScroll(0)}

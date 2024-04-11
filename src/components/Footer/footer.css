@@ -1,51 +1,64 @@
-.footer{
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    margin-top: 180px;
-    animation-name: navInfiniteBorder;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    z-index: 4777;
+.footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 180px;
+  animation-name: navInfiniteBorder;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  z-index: 4777;
 }
 
-.footLine{
-    z-index: 477777;
-    border: 1px solid rgb(96, 46, 96);
-    animation-name: navInfiniteBorder;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
+.footLine {
+  z-index: 477777;
+  border: 1px solid rgb(96, 46, 96);
+  animation-name: navInfiniteBorder;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
 
-.footerFinished{
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 33px;
+.footerFinished {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 33px;
 }
 
 .footer img {
-    width: 50px;
-    height: 30px;
-    z-index: 478888;
-    cursor: pointer;
+  width: 90px;
+  height: 67px;
+  z-index: 478888;
+  cursor: pointer;
 }
 
 .footer p {
-    line-height: 24px;
-    color: rgb(71, 85, 105);
+  line-height: 24px;
+  color: rgb(71, 85, 105);
 }
 
 @keyframes navInfiniteBorder {
-    to{
-        border-top-color: #c084fc;
-        border-right-color: #c084fc;
-        -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-        border-bottom-color: rgb(233, 35, 233);
-        border-left-color: rgb(233, 35, 233);
-        -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-        transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-    }
+  to {
+    border-top-color: #c084fc;
+    border-right-color: #c084fc;
+    -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    border-bottom-color: rgb(233, 35, 233);
+    border-left-color: rgb(233, 35, 233);
+    -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer img {
+    max-width: 70px;
+    height: 54px;
+  }
+
+  .footer p {
+    font-size: 11px;
+  }
 }

@@ -1,45 +1,54 @@
-.navigateBlock{
- position: sticky;
-    top: 0;
-    z-index: 444;
+.navigateBlock {
+  position: sticky;
+  top: 0;
+  z-index: 444;
 }
 
-.navPanel{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid rgb(96, 46, 96);
-    padding: 18px 25px;
-    background-color: rgb(18, 18, 18);
-    animation-name: navInfiniteBorder;
-    animation-duration: 8s;
-    transition-timing-function: ease;
-    animation-iteration-count: infinite;
+.navPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(96, 46, 96);
+  padding: 7px 25px;
+  background-color: rgb(18, 18, 18);
+  animation-name: navInfiniteBorder;
+  animation-duration: 8s;
+  transition-timing-function: ease;
+  animation-iteration-count: infinite;
 }
-.light  .navPanel{
-  background-color:rgb(203, 203, 203) ;
+.light .navPanel {
+  background-color: rgb(203, 203, 203);
 }
 
-.light .navPanel  a{
+.light .navPanel a {
   color: black;
 }
 
-.logoImg{
-    width: 70px;
-    height: 45px;
-    margin-left: 12px;
-    cursor: pointer;
+
+
+.light .logoImg{
+   z-index: 20000;
+  width: 124px;
+  height: 77px;
+  margin-left: 12px;
+  cursor: pointer;
 }
 
-.myPagesBlock{
-    display: flex;
-    column-gap: 26px;
+.logoImg {
+  z-index: 20000;
+  width: 110px;
+  height: 77px;
+  margin-left: 12px;
+  cursor: pointer;
 }
 
-
+.myPagesBlock {
+  display: flex;
+  column-gap: 26px;
+}
 
 .myPagesBlock a {
-    color: rgb(173, 183, 190);
+  color: rgb(173, 183, 190);
 }
 
 a {
@@ -54,9 +63,10 @@ a {
   position: relative;
 }
 
-a::before, a::after {
+a::before,
+a::after {
   box-sizing: inherit;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -66,7 +76,8 @@ a::before, a::after {
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
 }
-.draw::before, .draw::after {
+.draw::before,
+.draw::after {
   border-radius: 4px;
   border: 2px solid transparent;
   width: 0;
@@ -83,7 +94,8 @@ a::before, a::after {
 .draw:hover {
   color: rgb(233, 35, 233);
 }
-.draw:hover::before, .draw:hover::after {
+.draw:hover::before,
+.draw:hover::after {
   width: 100%;
   height: 100%;
 }
@@ -97,73 +109,77 @@ a::before, a::after {
 .draw:hover::after {
   border-bottom-color: rgb(233, 35, 233);
   border-left-color: rgb(233, 35, 233);
-  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+    height 0.25s ease-out 0.75s;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+    height 0.25s ease-out 0.75s;
 }
 
-
-
-.locationBurg{
+.locationBurg {
   color: white;
   display: flex;
   flex-direction: column;
-  left: 0; 
-  top: 87px;
+  left: 0;
+  top: 70px;
   align-items: center;
   padding-top: 25px;
   padding-bottom: 20px;
   row-gap: 25px;
-  background-color: rgb(12, 2, 12, .9);
+  background-color: rgb(12, 2, 12, 0.9);
   position: fixed;
   width: 100%;
   height: 100dvh;
 }
 
-.light .locationBurg{
+.light .locationBurg {
   background-color: rgba(183, 184, 185, 0.9);
 }
 
-.mobile{
+.mobile {
   display: none;
 }
 
-.likeBtn{
+.likeBtn {
   color: white;
   font-size: 27px;
 }
 
-
 @keyframes navInfiniteBorder {
-    to{
-        border-top-color: #c084fc;
-        border-right-color: #c084fc;
-        -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-         border-bottom-color: rgb(233, 35, 233);
-        border-left-color: rgb(233, 35, 233);
-        -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-        transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-    }
+  to {
+    border-top-color: #c084fc;
+    border-right-color: #c084fc;
+    -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    border-bottom-color: rgb(233, 35, 233);
+    border-left-color: rgb(233, 35, 233);
+    -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
+  }
 }
-
 
 @media only screen and (max-width: 1440px) {
-  .laptop{
+  .laptop {
     display: flex;
   }
-  .mobile{
+  .mobile {
     display: none;
   }
-
 }
 
-
 @media only screen and (max-width: 768px) {
-  .laptop{
+  .laptop {
     display: none;
   }
-  .mobile{
+  .mobile {
     display: flex;
   }
 
+  .logoImg {
+    margin: 0;
+    padding: 0;
+    max-width: 70px;
+    height: 54px;
+  }
 }
