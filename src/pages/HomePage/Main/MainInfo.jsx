@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 import { images } from "../../../Images/Images";
 
 
+const pdfFile = "http://localhost:3001/myCv.pdf";
 const MainInfo = () => {
-  const pdfFile = "http://localhost:3001/myCv.pdf";
 
   
   const {contactScroll } = useSelector(selectMyCv);
