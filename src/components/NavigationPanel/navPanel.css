@@ -1,0 +1,169 @@
+.navigateBlock{
+ position: sticky;
+    top: 0;
+    z-index: 444;
+}
+
+.navPanel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(96, 46, 96);
+    padding: 18px 25px;
+    background-color: rgb(18, 18, 18);
+    animation-name: navInfiniteBorder;
+    animation-duration: 8s;
+    transition-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.light  .navPanel{
+  background-color:rgb(203, 203, 203) ;
+}
+
+.light .navPanel  a{
+  color: black;
+}
+
+.logoImg{
+    width: 70px;
+    height: 45px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.myPagesBlock{
+    display: flex;
+    column-gap: 26px;
+}
+
+
+
+.myPagesBlock a {
+    color: rgb(173, 183, 190);
+}
+
+a {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  padding: 3px 10px;
+  color: white;
+  font-size: inherit;
+  font-weight: 700;
+  vertical-align: middle;
+  position: relative;
+}
+
+a::before, a::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.draw {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+.draw::before, .draw::after {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+.draw:hover {
+  color: rgb(233, 35, 233);
+}
+.draw:hover::before, .draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.draw:hover::before {
+  border-top-color: #c084fc;
+  border-right-color: #c084fc;
+  -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.draw:hover::after {
+  border-bottom-color: rgb(233, 35, 233);
+  border-left-color: rgb(233, 35, 233);
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+
+
+.locationBurg{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  left: 0; 
+  top: 87px;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  row-gap: 25px;
+  background-color: rgb(12, 2, 12, .9);
+  position: fixed;
+  width: 100%;
+  height: 100dvh;
+}
+
+.light .locationBurg{
+  background-color: rgba(183, 184, 185, 0.9);
+}
+
+.mobile{
+  display: none;
+}
+
+.likeBtn{
+  color: white;
+  font-size: 27px;
+}
+
+
+@keyframes navInfiniteBorder {
+    to{
+        border-top-color: #c084fc;
+        border-right-color: #c084fc;
+        -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+         border-bottom-color: rgb(233, 35, 233);
+        border-left-color: rgb(233, 35, 233);
+        -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+        transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+  .laptop{
+    display: flex;
+  }
+  .mobile{
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .laptop{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
+
+}

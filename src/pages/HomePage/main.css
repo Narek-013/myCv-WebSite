@@ -1,0 +1,159 @@
+.main {
+  margin-top: 90px;
+  margin-bottom: 49px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 96px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.loremTxt {
+  font-size: 21px;
+  color: rgb(173, 183, 190);
+}
+
+.mainBtn {
+  padding-top: 22px;
+}
+
+.herroImg {
+  box-shadow: 3px 3px 5px purple;
+  margin-right: 31px;
+  background-color: rgb(24, 24, 24);
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.herroImg img {
+  border-radius: 50%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.mediaBlocks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.countInfo{
+  cursor: pointer;
+}
+
+.light .lightModes{
+  color: black;
+}
+
+.aDown{
+  display: flex;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 1440px) {
+  .main {
+    padding: 0 30px;
+  }
+
+  .text {
+    font-size: 74px;
+  }
+
+  .loremTxt {
+    font-size: 19px;
+  }
+
+  .herroImg {
+    max-width: 320px;
+    max-height: 320px;
+  }
+
+  .herroImg img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .text {
+    font-size: 62px;
+  }
+
+  .loremTxt {
+    font-size: 15px;
+  }
+
+  .herroImg {
+    max-width: 280px;
+    max-height: 280px;
+    margin-right: 0;
+  }
+
+  .herroImg img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+.main{
+    flex-direction: column-reverse;
+    row-gap: 28px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+  .text {
+    font-size: 37px;
+  }
+
+  .loremTxt {
+    font-size: 13px;
+  }
+
+  .herroImg {
+    max-width: 280px;
+    max-height: 280px;
+    margin-right: 0;
+  }
+
+  .herroImg img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .mediaBlocks{
+    margin: 0 14px;
+    padding: 4px 10px;
+    border: 1px solid gray;
+    border-radius: 8px;
+  }
+
+}
+
+
+@media only screen and (max-width: 425px) {
+  .mediaBlocks{
+    margin: 0;
+    padding: 0;
+    border: 1px solid gray;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}

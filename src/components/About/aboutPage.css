@@ -1,0 +1,125 @@
+.aboutPage {
+  display: flex;
+  margin-top: 88px;
+  padding: 0 70px;
+  column-gap: 178px;
+}
+
+.aboutPage img {
+  width: 500px;
+  height: 500px;
+}
+
+.aboutInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.light .aboutInfo h3{
+  color: black;
+}
+
+.light .skillsBlock{
+  color: black;
+}
+
+.aboutInfo h3 {
+  font-size: 36px;
+  color: white;
+  font-weight: 700;
+}
+
+.light .aboutInfo p {
+  color: black;
+}
+
+.aboutInfo p {
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: system-ui;
+  margin-top: 14px;
+}
+
+.skillsBlock {
+  display: flex;
+  color: white;
+  color: rgb(229, 231, 235);
+  font-size: 16px;
+  font-stretch: 16px;
+  margin-top: 28px;
+}
+
+.skillsBlock .active {
+  border-bottom: 4px solid purple;
+  border-radius: 8px;
+  color: #c084fc;
+}
+
+.light .skills{
+  color: black;
+}
+
+.light .skillsBlock .active {
+  color: rgb(233, 35, 233);
+  border: none;
+}
+
+
+.skills {
+  padding-left: 12px;
+  color: white;
+}
+
+@media only screen and (max-width: 1440px) {
+  .aboutPage {
+    column-gap: 114px;
+  }
+  .skillsBlock .active {
+    border: none;
+  }
+
+  .aboutPage img {
+    max-width: 440px;
+    max-height: 440px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .aboutPage {
+    column-gap: 74px;
+    padding: 0 20px;
+  }
+
+  .aboutPage img {
+    max-width: 360px;
+    max-height: 360px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutPage {
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 15px;
+    row-gap: 19px;
+  }
+
+  .aboutInfo{
+    padding: 7px 14px;
+  }
+
+  .aboutPage img {
+    max-width: 360px;
+    max-height: 360px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+    .aboutPage img {
+        max-width: 270px;
+        max-height: 270px;
+    }
+}

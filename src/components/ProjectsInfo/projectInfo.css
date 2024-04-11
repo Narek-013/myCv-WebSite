@@ -1,0 +1,103 @@
+.projects{
+    margin-top: 128px;
+}
+
+
+.projectsIn{
+    display: flex;
+    column-gap: 37px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    margin-top: 55px;
+}
+
+.projectImgs{
+    width: 440px;
+    height: 260px;
+    cursor: pointer;
+}
+
+.light .lights{
+    color: black;
+}
+
+.projectTitle{
+    margin-top: 9px;
+    font-size: 20px;
+    color:rgb(229, 231, 235);
+    cursor: pointer;
+}
+
+.projectDesc{
+    margin-top: 2px;
+    color: rgb(173, 183, 190);
+    line-height: 24px;
+    
+}
+
+.projectBlock > img{
+    border-radius: 22px;
+
+}
+.slider-container{
+    overflow: hidden;
+}
+
+.projectBlock{
+    opacity: .6;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.light .projectBlock{
+    opacity: 1;
+    &:hover{
+        opacity: .8;
+    }
+}
+
+.projectsIn{
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 1440px) {
+.projectImgs{
+    max-width: 340px;
+    height: 210px;
+}
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+.projectImgs{
+    max-width: 240px;
+    height: 180px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+.projects{
+    margin-top: 49px;
+}
+
+.slider-container{
+    display: none;
+}
+
+.projectsIn{
+    display: block;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+}
+
+@media only screen and (max-width: 425px) {
+
+}

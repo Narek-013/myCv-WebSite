@@ -1,0 +1,180 @@
+.contactMe h6 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 34px;
+  color: white;
+  font-weight: 700;
+}
+
+.contact {
+  padding: 0 20px;
+  margin-top: 78px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.social {
+  display: flex;
+}
+
+.light .linkdin{
+  color: black;
+}
+.light .github{
+  color: black;
+}
+
+.linkdin,
+.github {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.formEmail {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 19px;
+  color: white;
+}
+
+.light .formEmail{
+  color: black;
+}
+
+.formArea {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.formEmail input {
+  width: 100%;
+  padding: 9px;
+  width: 682px;
+  border-radius: 6px;
+  background-color: rgb(24, 25, 30);
+  outline: none;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  color: rgb(243, 244, 246);
+
+  &::placeholder {
+    color: rgb(112, 112, 113);
+  }
+  &:focus {
+    border: 1px solid white;
+  }
+}
+
+.textArea {
+  text-transform: capitalize;
+  margin-top: 4px;
+  padding: 10px 9px;
+  overflow: hidden;
+  background-color: rgb(24, 25, 30);
+  border-radius: 6px;
+}
+
+.formBtn {
+  margin-top: 10px;
+  background-color: rgb(147, 51, 234);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 11px 0;
+}
+
+.radSoc {
+  background-color: purple;
+  left: 14px;
+  margin-top: 120px;
+  opacity: 0.7;
+}
+
+.light .contactMe h6{
+  color: black;
+}
+
+.light .lightModT{
+  color: black;
+}
+
+
+.light input{
+  background-color: #fff;
+  color: black;
+}
+.light .textArea{
+  background-color: #fff;
+  color: black;
+}
+
+@media only screen and (max-width: 1440px) {
+  .contact {
+    column-gap: 25px;
+    padding: 0 32px;
+  }
+  .formEmail input {
+    max-width: 582px;
+  }
+  .radSoc {
+    margin-top: 210px;
+    max-width: 220px;
+    max-height: 210px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact {
+    column-gap: 58px;
+  }
+  .formEmail input {
+    max-width: 482px;
+  }
+  .radSoc {
+    top: 185px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contactMe h6 {
+    margin-top: 57px;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    margin-top: 18px;
+  }
+  .formEmail input {
+    max-width: 382px;
+  }
+  .radSoc {
+    top: 460px;
+    max-width: 140px;
+    max-height: 137px;
+  }
+  
+  .linkdin,
+  .github {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+
+.formEmail input {
+    max-width: 282px;
+}
+.textArea{
+    max-width: 282px;
+}
+}

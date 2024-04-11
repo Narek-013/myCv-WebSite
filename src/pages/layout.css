@@ -1,0 +1,20 @@
+.navBlocks{
+    border: 1px solid gray;
+}
+
+.light{
+    background-color: rgb(203, 203, 203);
+}
+
+.light div{
+    background-color: transparent;
+}
+
+.light h1{
+    color: black;
+}
+
+.light p{
+    color: black;
+}
+

@@ -1,0 +1,8 @@
+.lightDark{
+    position: fixed;
+    right: 20px;
+    color: white;
+    width: 60px;
+    bottom: 30px;
+    z-index: 1000;
+}
