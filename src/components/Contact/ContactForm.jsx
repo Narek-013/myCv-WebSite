@@ -6,12 +6,14 @@ import { changeBtn, changeBtnErr, selectMyCv } from '../../store/slices/myCvSlic
 const ContactForm = () => {
   const btnRef = useRef(null)
   const thanksP = useRef(null)
+  const emailRef = useRef(null)
   const dispatch = useDispatch()
   const { contactBtn, mailValue } = useSelector(selectMyCv);
   
 
   const seeValue = (ev) => {
-    const txt = ev.target.value
+    const txt = ev.target.value;
+    emailRef.current.textContent = "The type is incorrect"
     if (
       txt.includes("@gmail.com") ||
       txt.includes("@gmail.am") ||
@@ -23,11 +25,14 @@ const ContactForm = () => {
       txt.includes("@Yahoo.")
     ) {
       dispatch(changeBtn(txt));
+      emailRef.current.textContent = "Your Email";
     } else {
       dispatch(changeBtnErr());
+
       thanksP.current.classList.remove("blockP");
     }
   }
+ 
 
   const sendEmail = (ev) => {
     ev.preventDefault();
@@ -77,15 +82,15 @@ const ContactForm = () => {
             />
           </div>
           <div className="formArea">
-            <label htmlFor="subject">Your Email</label>
+            <label  ref={emailRef} htmlFor="email">Your Email</label>
             <input
               onChange={seeValue}
               type="email"
               name="user_email"
-              id="subject"
+              id="email"
               required
               maxLength={34}
-              placeholder="Jacob@google.com"
+              placeholder={"Jacob@google.com"}
             />
           </div>
           <div className="formArea">
