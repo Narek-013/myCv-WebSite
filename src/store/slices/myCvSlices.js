@@ -8,6 +8,8 @@ const myCvSlices = createSlice({
     contactScroll: 0,
     projectScroll: 0,
     light: false,
+    contactBtn: false,
+    mailValue: "",
   },
   reducers: {
     getAboutScroll(state, { payload }) {
@@ -19,9 +21,17 @@ const myCvSlices = createSlice({
     getProjectScroll(state, { payload }) {
       state.projectScroll = payload;
     },
-    changeLight(state){
-      state.light = !state.light
-    }
+    changeLight(state) {
+      state.light = !state.light;
+    },
+    changeBtn(state,{payload}) {
+      state.contactBtn = true;
+      state.mailValue = payload
+    },
+    changeBtnErr(state) {
+      state.contactBtn = false;
+      state.mailValue = ""
+    },
   },
   extraReducers: (builder) => {},
 });
@@ -29,4 +39,11 @@ const myCvSlices = createSlice({
 
 export const MyCvslices = myCvSlices.reducer;
 export const selectMyCv = state => state.myCv;
-export const { getAboutScroll, getContactScroll ,getProjectScroll,changeLight} = myCvSlices.actions;
+export const {
+  getAboutScroll,
+  getContactScroll,
+  getProjectScroll,
+  changeLight,
+  changeBtn,
+  changeBtnErr,
+} = myCvSlices.actions;

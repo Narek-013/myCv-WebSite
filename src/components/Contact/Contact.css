@@ -105,6 +105,9 @@
   color: black;
 }
 
+.nameClient{
+  text-transform: capitalize;
+}
 
 .light input{
   background-color: #fff;
@@ -113,6 +116,27 @@
 .light .textArea{
   background-color: #fff;
   color: black;
+}
+
+.changeValue{
+  opacity: .4;
+  cursor:not-allowed ;
+}
+.thanks{
+  width: 100%;
+ background-color: rgb(17, 99, 1);
+ padding: 10px;
+ display: none;
+ justify-content: center;
+ border-radius: 7px;
+}
+
+.blockP{
+  display: flex;
+}
+
+.noneBtn{
+  display: none;
 }
 
 @media only screen and (max-width: 1440px) {
