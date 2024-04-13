@@ -17,7 +17,7 @@ const About = () => {
   
 
   return (
-    <div className="aboutPage" ref={aboutRef} >
+    <div className="aboutPage" ref={aboutRef}>
       <img src={images.aboutImg} alt="#" />
       <div className="aboutInfo">
         <h3>About Me</h3>

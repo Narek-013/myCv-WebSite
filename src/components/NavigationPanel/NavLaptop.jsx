@@ -21,7 +21,9 @@ const NavLaptop = ({light}) => {
 
   return (
     <nav className="navPanel laptop">
-     {!light && <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-40 w-60 z-0 blur-lg absolute  transform -translate-x-1/2 -translate-1/2 "></div>}
+      {!light && (
+        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-40 w-60 z-0 blur-lg absolute  transform -translate-x-1/2 -translate-1/2 "></div>
+      )}
       <img
         src={light ? images.myCvDark : images.myCvLight}
         alt="Logo"

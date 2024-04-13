@@ -70,19 +70,21 @@ const ContactForm = () => {
       <div>
         <form className="formEmail" onSubmit={sendEmail}>
           <div className="formArea">
-            <label htmlFor="mail">Thank you for contacting us!</label>
+            <label htmlFor="mail">Name</label>
             <input
               type="text"
               name="user_name"
               id="mail"
               required
-              className='nameClient'
+              className="nameClient"
               placeholder="Name"
               maxLength={15}
             />
           </div>
           <div className="formArea">
-            <label  ref={emailRef} htmlFor="email">Your Email</label>
+            <label ref={emailRef} htmlFor="email">
+              Your Email
+            </label>
             <input
               onChange={seeValue}
               type="email"
@@ -114,7 +116,7 @@ const ContactForm = () => {
             <button className="formBtn changeValue">Send</button>
           )}
           <p ref={thanksP} className="thanks">
-            Thank You{" "}
+            Thank you for contacting us!{" "}
           </p>
         </form>
       </div>
