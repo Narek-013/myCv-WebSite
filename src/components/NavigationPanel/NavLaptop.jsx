@@ -19,6 +19,7 @@ const NavLaptop = ({light}) => {
  };
 
 
+
   return (
     <nav className="navPanel laptop">
       {!light && (

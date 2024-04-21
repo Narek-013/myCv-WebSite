@@ -17,7 +17,7 @@ const ContactSocialBlock = () => {
         <Link target="blank" to="https://github.com/Narek-013">
           <FaGithub className="github" />
         </Link>
-        <Link target="blank" to="https://www.linkedin.com/in/narek-meliksetyan-40b913302/">
+        <Link target="blank" to="https://www.linkedin.com/in/narek-meliksetyan-838481301/">
           <FaLinkedin className="linkdin" />
         </Link>
       </div>

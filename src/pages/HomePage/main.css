@@ -22,7 +22,7 @@
 }
 
 .herroImg {
-  box-shadow: 3px 3px 5px purple;
+  /* box-shadow: 3px 3px 5px purple; */
   margin-right: 31px;
   background-color: rgb(24, 24, 24);
   border-radius: 50%;
@@ -31,6 +31,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: heroImgBoxShadow;
+  animation-duration: 4s;
+  /* transition: all, ease-out; */
+  animation-iteration-count: infinite;
 }
 
 .herroImg img {
@@ -38,6 +42,7 @@
   max-width: 300px;
   max-height: 300px;
 }
+
 
 .mediaBlocks{
     display: flex;
@@ -60,6 +65,15 @@
   justify-content: center;
 }
 
+
+@keyframes heroImgBoxShadow {
+  from{
+    box-shadow: 1px 1px 5px purple;
+  }
+  to{
+     box-shadow: 3px 3px 5px purple;
+  }
+}
 
 @media only screen and (max-width: 1440px) {
   .main {
