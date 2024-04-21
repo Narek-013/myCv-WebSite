@@ -15,7 +15,7 @@ const NavLaptop = ({light}) => {
  const { aboutScroll, contactScroll ,projectScroll} = useSelector(selectMyCv);
 
  const changeScroll = (n) => {
-   window.scrollTo({ behavior: "smooth", top: n - 81});
+   window.scrollTo({ behavior: "smooth", top: n - 114});
  };
 
 

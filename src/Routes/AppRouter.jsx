@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "../pages/Layout";
 import Main from "../pages/HomePage/Main";
 import Certificaions from "../components/About/AboutInfoComp/Certificaions";
@@ -18,6 +18,7 @@ const AppRouter = () => {
               <Route path="/certificaions" element={<Certificaions />} />
             </Route>
           </Route>
+          <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
       </div>
     );
