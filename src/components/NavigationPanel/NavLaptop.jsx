@@ -11,7 +11,7 @@ const NavLaptop = ({ light }) => {
   const about = useRef(null);
   const project = useRef(null);
   const contact = useRef(null);
-  const disptach = useDispatch()
+  const dispatch = useDispatch();
 
   const { aboutScroll, contactScroll, projectScroll, likesCounts } =
     useSelector(selectMyCv);
@@ -22,12 +22,12 @@ const NavLaptop = ({ light }) => {
 
   const addCount = () => {
     localStorage.setItem("activeLike", likesCounts.likes + 1);
-    disptach(addLikeCount());
+    dispatch(addLikeCount());
   };
 
   const removeLike = () => {
     localStorage.removeItem("activeLike");
-    disptach(addLikeCounts());
+    dispatch(addLikeCounts());
   }
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const NavLaptop = ({ light }) => {
     if(x === null) {
       // console.log(128);
     }else{
-      disptach(addLikeCount());
+      dispatch(addLikeCount());
     }
   }, []);
 
