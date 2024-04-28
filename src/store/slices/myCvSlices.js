@@ -10,6 +10,10 @@ const myCvSlices = createSlice({
     light: false,
     contactBtn: false,
     mailValue: "",
+    likesCounts: {
+      likes: 75,
+      activeUser: true,
+    },
   },
   reducers: {
     getAboutScroll(state, { payload }) {
@@ -24,13 +28,21 @@ const myCvSlices = createSlice({
     changeLight(state) {
       state.light = !state.light;
     },
-    changeBtn(state,{payload}) {
+    changeBtn(state, { payload }) {
       state.contactBtn = true;
-      state.mailValue = payload
+      state.mailValue = payload;
     },
     changeBtnErr(state) {
       state.contactBtn = false;
-      state.mailValue = ""
+      state.mailValue = "";
+    },
+    addLikeCount(state) {
+      state.likesCounts.likes += 1;
+      state.likesCounts.activeUser = false;
+    },
+    addLikeCounts(state) {
+      state.likesCounts.likes -= 1;
+      state.likesCounts.activeUser = true;
     },
   },
   extraReducers: (builder) => {},
@@ -46,4 +58,6 @@ export const {
   changeLight,
   changeBtn,
   changeBtnErr,
+  addLikeCount,
+  addLikeCounts,
 } = myCvSlices.actions;

@@ -1,9 +1,12 @@
 import ScrollTrigger from "react-scroll-trigger";
 import CountUp from "react-countup";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectMyCv } from "../../../store/slices/myCvSlices";
 
 const InfoMe = () => {
   const [count, setCount] = useState(false);
+  const {likesCounts } =useSelector(selectMyCv);
 
   const myInfo = [
     {
@@ -16,7 +19,7 @@ const InfoMe = () => {
     },
     {
       name: "Likes",
-      count: 78,
+      count: likesCounts.likes,
     },
     {
       name: "Years",

@@ -141,7 +141,10 @@ a::after {
 
 .likeBtn {
   color: white;
-  font-size: 27px;
+  font-size: 25px;
+  &:hover{
+    transform: scale(1.3);
+  }
 }
 
 @keyframes navInfiniteBorder {

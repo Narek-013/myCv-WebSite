@@ -1,24 +1,43 @@
 import { Link } from "react-router-dom";
 import { images } from "../../Images/Images";
-import { selectMyCv } from "../../store/slices/myCvSlices";
-import { useSelector } from "react-redux";
-import { useRef } from "react";
+import { addLikeCount, addLikeCounts, changeActiveUs, selectMyCv } from "../../store/slices/myCvSlices";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useRef } from "react";
+import { BiLike } from "react-icons/bi";
+import { BiSolidLike } from "react-icons/bi";
 
-
-const NavLaptop = ({light}) => {
-
+const NavLaptop = ({ light }) => {
   const home = useRef(null);
   const about = useRef(null);
   const project = useRef(null);
   const contact = useRef(null);
+  const disptach = useDispatch()
 
- const { aboutScroll, contactScroll ,projectScroll} = useSelector(selectMyCv);
+  const { aboutScroll, contactScroll, projectScroll, likesCounts } =
+    useSelector(selectMyCv);
 
- const changeScroll = (n) => {
-   window.scrollTo({ behavior: "smooth", top: n - 114});
- };
+  const changeScroll = (n) => {
+    window.scrollTo({ behavior: "smooth", top: n - 114 });
+  };
 
+  const addCount = () => {
+    localStorage.setItem("activeLike", likesCounts.likes + 1);
+    disptach(addLikeCount());
+  };
 
+  const removeLike = () => {
+    localStorage.removeItem("activeLike");
+    disptach(addLikeCounts());
+  }
+
+  useEffect(() => {
+    let x = localStorage.getItem("activeLike")
+    if(x === null) {
+      // console.log(128);
+    }else{
+      disptach(addLikeCount());
+    }
+  }, []);
 
   return (
     <nav className="navPanel laptop">
@@ -56,6 +75,7 @@ const NavLaptop = ({light}) => {
         >
           Contact
         </Link>
+        {likesCounts.activeUser ? <BiLike className="likeBtn" onClick={addCount} /> : <BiSolidLike className="likeBtn" onClick={removeLike}/>}
       </div>
     </nav>
   );
