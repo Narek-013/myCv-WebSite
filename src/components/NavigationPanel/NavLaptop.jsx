@@ -52,7 +52,7 @@ const NavLaptop = ({ light }) => {
       />
       <div className="myPagesBlock buttons">
         <Link className="draw" ref={home} onClick={() => changeScroll(0)}>
-          Home
+          Home Page
         </Link>
         <Link
           className="draw"
