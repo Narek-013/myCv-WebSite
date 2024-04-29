@@ -1,5 +1,3 @@
-import { defaults } from "json-server";
-
 const projectsData = [
   {
     id: 1,
