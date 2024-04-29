@@ -179,6 +179,9 @@
   .formEmail input {
     max-width: 382px;
   }
+  .textArea{
+    max-width: 382px;
+  }
   .radSoc {
     top: 460px;
     max-width: 140px;
@@ -196,9 +199,9 @@
 @media only screen and (max-width: 425px) {
 
 .formEmail input {
-    max-width: 282px;
+    max-width: 300px;
 }
 .textArea{
-    max-width: 282px;
+    max-width: 300px;
 }
 }
