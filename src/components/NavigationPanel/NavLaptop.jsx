@@ -5,8 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 import { BiLike } from "react-icons/bi";
 import { BiSolidLike } from "react-icons/bi";
+// import LightDark from "../components/Light/DarkMode";
+import LightDark from ".././Light/DarkMode"
 
-const NavLaptop = ({ light }) => {
+
+const NavLaptop = ({ light, darkLight }) => {
   const home = useRef(null);
   const about = useRef(null);
   const project = useRef(null);
@@ -28,13 +31,13 @@ const NavLaptop = ({ light }) => {
   const removeLike = () => {
     localStorage.removeItem("activeLike");
     dispatch(addLikeCounts());
-  }
+  };
 
   useEffect(() => {
-    let x = localStorage.getItem("activeLike")
-    if(x === null) {
+    let x = localStorage.getItem("activeLike");
+    if (x === null) {
       // console.log(128);
-    }else{
+    } else {
       dispatch(addLikeCount());
     }
   }, []);
@@ -52,7 +55,7 @@ const NavLaptop = ({ light }) => {
       />
       <div className="myPagesBlock buttons">
         <Link className="draw" ref={home} onClick={() => changeScroll(0)}>
-          Home Page
+          Home
         </Link>
         <Link
           className="draw"
@@ -75,7 +78,12 @@ const NavLaptop = ({ light }) => {
         >
           Contact
         </Link>
-        {likesCounts.activeUser ? <BiLike className="likeBtn" onClick={addCount} /> : <BiSolidLike className="likeBtn" onClick={removeLike}/>}
+        {likesCounts.activeUser ? (
+          <BiLike className="likeBtn" onClick={addCount} />
+        ) : (
+          <BiSolidLike className="likeBtn" onClick={removeLike} />
+        )}
+        <LightDark darkLight={darkLight} />
       </div>
     </nav>
   );

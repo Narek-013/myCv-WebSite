@@ -1,5 +1,6 @@
 import { images } from "../../Images/Images";
 import React, { Component } from "react";
+import { Link } from "react-scroll";
 import Slider from "react-slick";
 
 function PauseOnHover() {
@@ -87,13 +88,22 @@ function PauseOnHover() {
        previewUrl: "/",
      },
    ];
+
+
   return (
     <div className="slider-container">
       <Slider {...settings} className="mobRes">
           {projectsData.map((el, index) => {
             return (
               <div className="projectBlock" key={index}>
-                <img src={el.image} alt="projectImgs" className="projectImgs" />
+                <a target="blank" href="https://github.com/">
+                  <img
+                    src={el.image}
+                    alt="projectImgs"
+                    className="projectImgs"
+                  />
+                </a>
+
                 <p className="projectTitle">{el.title}</p>
                 <p className="projectDesc">{el.description}</p>
               </div>

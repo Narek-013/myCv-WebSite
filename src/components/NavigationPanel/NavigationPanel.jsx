@@ -4,17 +4,15 @@ import NavMobile from './NavMobile';
 import './navPanel.css';
 import { selectMyCv } from '../../store/slices/myCvSlices';
 
-const NavigationPanel = () => {
+const NavigationPanel = ({ darkLight }) => {
+  const { light } = useSelector(selectMyCv);
 
-  const {light} = useSelector(selectMyCv)
-
-
-    return (
-      <div className="navigateBlock">
-        <NavLaptop light={light} />
-        <NavMobile light={light} />
-      </div>
-    );
-}
+  return (
+    <div className="navigateBlock">
+      <NavLaptop light={light} darkLight={darkLight} />
+      <NavMobile light={light} />
+    </div>
+  );
+};
 
 export default NavigationPanel;

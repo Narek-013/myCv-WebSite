@@ -4,9 +4,9 @@ import './lightDark.css'
 import { useDispatch } from "react-redux";
 import { changeLight } from "../../store/slices/myCvSlices";
 
-export default function LightDark({ darkLight }) {
+export default function LightDark({ darkLight, mobIcon }) {
   const [isDarkMode, toggle] = useState(true);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const properties = {
     sun: {
@@ -47,11 +47,11 @@ export default function LightDark({ darkLight }) {
   };
 
   return (
-    <div className="lightDark">
+    <div className={mobIcon ? 'lightMob' : "lightDark"}>
       <animated.svg
         xmlns="http://www.w3.org/2000/svg"
-        width="44"
-        height="44"
+        width="28"
+        height="28"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"

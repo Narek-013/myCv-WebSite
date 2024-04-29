@@ -2,20 +2,29 @@ import { Outlet } from "react-router-dom";
 import NavigationPanel from "../components/NavigationPanel/NavigationPanel";
 import Footer from "../components/Footer/Footer";
 import LightDark from "../components/Light/DarkMode";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import './layout.css'
 
 const Layout = () => {
 
     const darkLight = useRef(null)
+    const [mobIcon,setMobIcon] = useState(false)
+
+    useEffect(() => {
+      const x = window.screen.width
+      if(x <= 768) {
+        console.log(window.screen.width);
+        setMobIcon(!mobIcon)
+      }
+    },[])
 
     return (
       <div ref={darkLight}>
-        <NavigationPanel />
+        <NavigationPanel darkLight={darkLight} />
         <div className="container">
           <Outlet />
         </div>
-        <LightDark darkLight={darkLight} />
+       {mobIcon && <LightDark darkLight={darkLight} mobIcon={mobIcon} />}
         <Footer />
       </div>
     );

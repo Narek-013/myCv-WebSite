@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { images } from "../../Images/Images";
 
 const AllWeb = () => {
@@ -83,9 +84,11 @@ const AllWeb = () => {
         {projectsData.map((el, index) => {
           return (
             <div className="projectBlock" key={index}>
-              <img src={el.image} alt="projectImgs" className="projectImgs" />
-              <p className="projectTitle">{el.title}</p>
-              <p className="projectDesc">{el.description}</p>
+              <Link target="blank" to="https://github.com/Narek-013">
+                <img src={el.image} alt="projectImgs" className="projectImgs" />
+                <p className="projectTitle">{el.title}</p>
+                <p className="projectDesc">{el.description}</p>
+              </Link>
             </div>
           );
         })}
