@@ -49,8 +49,7 @@ const MainInfo = () => {
             />
           </h1>
           <p className="loremTxt">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+           I am Junior Front-End Engineer
           </p>
           <div className="mainBtn">
             <button
@@ -62,7 +61,7 @@ const MainInfo = () => {
             </button>
             <button className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3 light">
               <span href={images.user}  download={"myCv"} className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                <a href={pdfFile} download="myCv" className="aDown"> Download CV</a>
+                <a href={pdfFile} download="resume" className="aDown"> Download CV</a>
               </span>
             </button>
           </div>

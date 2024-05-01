@@ -49,6 +49,7 @@ const NavMobile = ({light}) => {
               <Link onClick={() => changeScroll(projectScroll)}>Projects</Link>
               <Link onClick={() => changeScroll(contactScroll)}>Contact</Link>
               {likesCounts.activeUser ? <BiLike className="likeBtn" onClick={addCount} /> : <BiSolidLike className="likeBtn" onClick={removeLike}/>}
+
             </div>
           )}
         </div>

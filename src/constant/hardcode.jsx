@@ -1,3 +1,5 @@
+import {images} from "../Images/Images"
+
 const projectsData = [
   {
     id: 1,

@@ -10,6 +10,7 @@ const Skills = () => {
           <li>Bootsrap</li>
           <li>JavaScript</li>
           <li>React.js</li>
+          <li>React Native</li>
           <li>Redux</li>
           <li>Redux/Toolkit</li>
           <li>Next.js</li>

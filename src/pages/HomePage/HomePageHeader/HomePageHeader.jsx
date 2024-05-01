@@ -4,8 +4,6 @@ import { images } from "../../../Images/Images";
 
 const HomePageHeader = () => {
 
-
-  
   return (
     <div className="main">
       <MainInfo  />
