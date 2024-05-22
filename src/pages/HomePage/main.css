@@ -22,7 +22,6 @@
 }
 
 .herroImg {
-  /* box-shadow: 3px 3px 5px purple; */
   margin-right: 31px;
   background-color: rgb(24, 24, 24);
   border-radius: 50%;
@@ -33,7 +32,6 @@
   align-items: center;
   animation-name: heroImgBoxShadow;
   animation-duration: 4s;
-  /* transition: all, ease-out; */
   animation-iteration-count: infinite;
 }
 
@@ -128,9 +126,9 @@
     align-items: center;
     margin-top: 40px;
 }
-
   .text {
     font-size: 37px;
+    max-width: 300px;
   }
 
   .loremTxt {
