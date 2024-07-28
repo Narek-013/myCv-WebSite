@@ -3,7 +3,7 @@ import { selectMyCv } from "../../../store/slices/myCvSlices";
 import { useSelector } from "react-redux";
 import { images } from "../../../Images/Images";
 
-const pdfFile = "https://narekcv.netlify.app/myCv.pdf";
+const pdfFile = "https://narekcv.netlify.app/Narek_Meliksetyan.pdf";
 const MainInfo = () => {
   const { contactScroll } = useSelector(selectMyCv);
 
@@ -42,7 +42,7 @@ const MainInfo = () => {
           repeat={Infinity}
         />
       </h1>
-      <p className="loremTxt">I am Junior Front-End Engineer</p>
+      <p className="loremTxt">I am Middle Front-End Engineer</p>
       <div className="mainBtn">
         <button
           onClick={changeScroll}
